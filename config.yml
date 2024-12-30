@@ -1,0 +1,44 @@
+bot:
+  token: 'MTMwNjEyNDI3ODM0NDk3NDM2Nw.GTsp6s.qpwJLDAPZb0lsAHkR9yBJXYMqJq-1rYA6zIkmk'
+  guild_ids:
+    # Enabled guilds
+    # First guild id is default
+    - 10001
+  level_post_channel_id: 10001
+  locale_ids:
+    EN: 10001
+    PT: 10001
+    ZH: 10001
+  booster_role_id: 0
+  stage_moderator_role_id: 0
+  member_role_id: 0
+  rich_presence:
+    enabled: true
+    activities:
+      - type: competing
+        name: "SMM:WE v3.3.3"
+        status: online
+      - type: playing
+        name: "Creating awesome levels in SMM:WE"
+        status: online
+      - type: watching
+        name: "How nice the Staff is UwU"
+        status: online
+      - type: competing
+        name: "Engine Bot vs Coursebot"
+        status: dnd
+
+
+enginetribe_api:
+  host: "http://enginetribe.gq:30000"
+  api_key: "enginetribe"
+  tokens:
+    EN: "000001"
+    ES: "000002"
+    PT: "000003"
+    ZH: "000004"
+
+
+webhook: # To upload level files
+  host: "0.0.0.0"
+  port: 5586
