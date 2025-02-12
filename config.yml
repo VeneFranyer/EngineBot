@@ -1,50 +1,45 @@
-enginetribe:
-  host: '0.0.0.0'  # Engine Tribe server host
-  port: 30000  # Default port that SMM_WE uses
-  api_root: 'http://192.168.1.109:30000/'  # Used in level links
-  api_key: "enginetribe"  # Engine Bot API key
-  verify_user_agent: true  # Verify user agent
-  rows_perpage: 32  # Levels per page
-  upload_limit: 25  # Max levels per account
-  booster_extra_limit: 10  # Privileges of boosters
-  record_clear_users: true  # Record and display cleared users
-  cors_allowed_origins: [ 'https://nmweb.enginetribe.gq', 'http://nmweb.enginetribe.gq' ]  # CORS allowed origins
+bot:
+  token: 'MTMwNjEyNDI3ODM0NDk3NDM2Nw.GLx1xu.EV_hv97E6DUTPRO3S7E5RshnSSdpdUqM7iuPNM'
+  guild_ids:
+    # Enabled guilds
+    # First guild id is default
+    - 1215463728439500801
+    - 1335854779217350679
+  locale_ids:
+    EN: 10001
+    PT: 10001
+    ZH: 10001
+  level_post_channel_id: 1335854837421838386
+  booster_role_id: 1268753494832054335
+  stage_moderator_role_id: 1279034104561668177
+  member_role_id: 1279815330566508627
+  rich_presence:
+    enabled: true
+    activities:
+      - type: competing
+        name: "SMM:WE"
+        status: online
+      - type: playing
+        name: "Creating awesome levels in SMM:WE"
+        status: online
+      - type: watching
+        name: "How nice the Staff is UwU"
+        status: online
+      - type: competing
+        name: "Engine Bot vs Coursebot"
+        status: dnd
 
-database:
-  adapter: 'mysql'  # Database adapter to use, mysql, postgresql and sqlite is supported
-  host: 'localhost'  # Database host (or file name when using sqlite)
-  port: 3306  # Database port
-  user: 'enginetribe'  # Database user
-  password: 'enginetribe'  # Database password
-  database: 'enginetribe'  # Database name
-  ssl: false  # Use SSL for database connection
-  debug: false  # Log SQL connections to stdout
 
-redis:
-  host: '127.0.0.1'  # Redis host
-  port: 6379  # Redis port
-  database: 0  # Redis database
-  password: ''  # Redis password
+enginetribe_api:
+  host: "http://104.243.47.202:35783"
+  api_key: "enginetribe"
+  tokens:
+    EN: "000001"
+    ES: "000002"
+    PT: "000003"
+    ZH: "000004"
 
-storage:
-  provider: 'database'  # Storage provider to use, onemanager, onedrive-cf and database are supported now
-  # database: use database to store levels  (recommended)
-  # onedrive-cf: https://github.com/spencerwooo/onedrive-cf-index
-  # onemanager: https://github.com/qkqpttgf/OneManager-php
-  url: 'http://enginetribe.gq:30000/'  # Storage url with '/'
-  auth_key: ''  # Storage auth key, onedrive-cf and onemanager only
-  proxied: true  # Proxy levels via CloudFlare CDN, onedrive-cf only
 
-push:
-  engine_bot:
-    enabled: false  # Enable push to Engine Bot
-    enable_counter: false  # Enable counter (100 / 1000 plays, death, etc.) push
-    enable_new_arrival: false  # Enable new level push
-    urls: [ 'http://192.168.1.109:5586' ]  # Engine Bot webhook url
-  discord:
-    enabled: false  # Enable push to Discord
-    enable_new_arrival: false  # Enable new level push
-    urls: [ 'https://discord.com/api/webhooks/my_awesome_webhook' ]  # Discord webhook url
-    avatar: 'https://raw.githubusercontent.com/EngineTribe/EngineBotDiscord/main/assets/engine-bot.png'
-    nickname: "Engine-bot"
-    server_name: "Engine Kingdom"
+webhook: # To upload level files
+  host: "0.0.0.0"
+  port: 5586
